@@ -1,8 +1,8 @@
 # eks-ingress-testing
 
-This Terraform project spins up an EKS cluster with the AWS Load Balancer Controller (LBC) and a two sample Kubernetes Services.
+This Terraform project spins up an EKS cluster with the AWS Load Balancer Controller (LBC) and two sample Kubernetes Services.
 
-The AWS LBC gets permissions via the EKS Pod Identity.
+The AWS LBC gets permissions via EKS Pod Identity.
 
 ## Requirements
 

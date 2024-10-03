@@ -5,24 +5,24 @@ module "eks_al2023" {
   cluster_name    = "propel-ingress-al2023-arm"
   cluster_version = "1.31"
 
-  cluster_endpoint_public_access  = true
+  cluster_endpoint_public_access = true
 
   # EKS Addons
   cluster_addons = {
-    coredns                = {
+    coredns = {
       most_recent = true
     }
     eks-pod-identity-agent = {
       most_recent = true
     }
-    kube-proxy             = {
+    kube-proxy = {
       most_recent = true
     }
-    vpc-cni                = {
+    vpc-cni = {
       most_recent = true
     }
   }
-   
+
   # To add the current caller identity as an administrator
   enable_cluster_creator_admin_permissions = true
 

@@ -1,5 +1,6 @@
 module "vpc" {
-  source = "terraform-aws-modules/vpc/aws"
+  source  = "terraform-aws-modules/vpc/aws"
+  version = "~> 5.13"
 
   name = "propel-ingress-test"
   cidr = "10.1.0.0/16"

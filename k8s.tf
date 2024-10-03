@@ -13,7 +13,7 @@ resource "kubernetes_namespace" "app" {
 
 resource "kubernetes_deployment" "nginx_deployment" {
   metadata {
-    name = "nginx-deployment"
+    name      = "nginx-deployment"
     namespace = kubernetes_namespace.app.metadata[0].name
 
     labels = {
@@ -53,7 +53,7 @@ resource "kubernetes_deployment" "nginx_deployment" {
 
 resource "kubernetes_service" "nginx_service_instance" {
   metadata {
-    name = "nginx-service-instance"
+    name      = "nginx-service-instance"
     namespace = kubernetes_namespace.app.metadata[0].name
 
     annotations = {
@@ -79,7 +79,7 @@ resource "kubernetes_service" "nginx_service_instance" {
 
 resource "kubernetes_service" "nginx_service_ip" {
   metadata {
-    name = "nginx-service-ip"
+    name      = "nginx-service-ip"
     namespace = kubernetes_namespace.app.metadata[0].name
 
     annotations = {

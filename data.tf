@@ -319,8 +319,8 @@ data "aws_iam_policy_document" "aws_lbc_policy" {
 # EKS Pod Identity Trust Policy - https://docs.aws.amazon.com/eks/latest/userguide/pod-id-association.html#pod-id-confirm-role-configuration
 data "aws_iam_policy_document" "eks_pod_identity_trust_policy" {
   statement {
-    sid     = "TrustEKsPodIdentity"
-    effect  = "Allow"
+    sid    = "TrustEKsPodIdentity"
+    effect = "Allow"
 
     principals {
       type        = "Service"

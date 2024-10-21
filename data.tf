@@ -1,9 +1,19 @@
 data "aws_eks_cluster" "cluster" {
   name = module.eks_al2023.cluster_name
+
+  depends_on = [
+    # Implicit dependency is insufficient in this case, the entire cluster must be created first
+    module.eks_al2023 
+  ]
 }
 
 data "aws_eks_cluster_auth" "cluster" {
   name = module.eks_al2023.cluster_name
+
+  depends_on = [
+    # Implicit dependency is insufficient in this case, the entire cluster must be created first
+    module.eks_al2023 
+  ]
 }
 
 # Installation instructions: https://github.com/aws/eks-charts/tree/master/stable/aws-load-balancer-controller
